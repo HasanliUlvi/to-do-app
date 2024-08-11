@@ -31,11 +31,13 @@ const server = http.createServer((req, res) => {
                     'title': 'To-Do List Application',
                     'todoList': todo_list_html,
                 };
+
+                const htmlData = ejs.render(template, placeholders);
                 
-                for (const [key, value] of Object.entries(placeholders)) {
-                    const regex = new RegExp(`\\{\\{${key}\\}\\}`, 'g');
-                    htmlData = htmlData.replace(regex, value);
-                }
+                // for (const [key, value] of Object.entries(placeholders)) {
+                //     const regex = new RegExp(`\\{\\{${key}\\}\\}`, 'g');
+                //     htmlData = htmlData.replace(regex, value);
+                // }
                 res.setHeader('Content-Type', 'text/html');
                 res.statusCode = 200;
                 res.end(htmlData);
