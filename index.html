@@ -8,7 +8,7 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 <body class="flex items-center justify-center h-screen">
-    <div class="p-6 bg-white rounded-xl shadow-lg h-96">
+    <div class="p-6 bg-white rounded-xl shadow-none md:shadow-lg h-96">
         <div class="text-lg font-bold tracking-wide">{{title}}</div>
         <form class="my-3" id="todo-form" method="POST" action="/add-todo">
             <input class="focus:outline-none text-sm text-gray-500 border border-gray-300 px-2 py-1 rounded-lg" type="text" name="task" id="todo-input" placeholder="Enter a new task" required>
